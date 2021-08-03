@@ -11,9 +11,6 @@
     "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended"
   ],
-  "parserOptions": {
-    "project": "./tsconfig.json"
-  },
   "rules": {
     "@next/next/no-img-element": "off",
     "@typescript-eslint/no-unused-vars": "off",
@@ -55,5 +52,12 @@
     "unused-imports/no-unused-imports": "error",
     "unused-imports/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }]
   },
-  "overrides": [{ "files": ["**/*.ts", "**/*.tsx"] }]
+  "overrides": [
+    {
+      "files": ["**/*.ts", "**/*.tsx"],
+      "parserOptions": {
+        "project": "./tsconfig.json"
+      }
+    }
+  ]
 }
